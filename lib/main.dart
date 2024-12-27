@@ -37,7 +37,7 @@ class CatService extends ChangeNotifier {
   //램덤 고양이 사진 API 호출
   void getRandomCatImages() async {
     Response result = await Dio().get(
-        "https://api.thecatapi.com/v1/images/search?limit=1&mime_types=jpg");
+        "https://api.thecatapi.com/v1/images/search?limit=10&mime_types=jpg");
     print(result.data);
 
     for (var i = 0; i < result.data.length; i++) {
@@ -82,10 +82,12 @@ class HomePage extends StatelessWidget {
             padding: EdgeInsets.all(8),
             crossAxisCount: 2,
             children: List.generate(
-              10,
+              catService.catImages.length,
               (index) {
-                return Center(
-                  child: Text("$index", style: TextStyle(fontSize: 24)),
+                String catImage = catService.catImages[index];
+                return Image.network(
+                  catImage,
+                  fit: BoxFit.cover,
                 );
               },
             ),
