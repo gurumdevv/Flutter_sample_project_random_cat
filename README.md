@@ -1,16 +1,5 @@
-# random_cat
+# Flutter Sample Project: Random Cat
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Dio를 사용해서 REST API 통신 구현
+- SharedPreferences를 사용해서 로컬에 데이터 저장
+- Provider을 사용해서 화면 간 데이터 공유 및 데이터 변경 시 화면 업데이트 구현
